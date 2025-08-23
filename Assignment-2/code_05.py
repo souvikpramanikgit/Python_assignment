@@ -6,7 +6,13 @@
 
 noc=int(input("Enter the number of calls: "))
 
-bill=0
+bill=200
 
-if noc<=100:
-    bill=200
+if noc>100 and noc<=150:
+    bill=bill+((noc-100)*0.60)
+if noc>150 and noc<=200:
+    bill=bill+((noc-100)*0.50)
+if noc>200:
+    bill=bill+((noc-200)*0.40)
+
+print(f"Total bill: {bill}")
